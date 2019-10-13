@@ -11,10 +11,9 @@ public class Discovery {
 	private User user;
 	private int upVote;
 	private int downVote;
-
-	public Discovery() {
-	}
-
+	
+	public Discovery(){}
+	
 	public Discovery(Discovery discovery) {
 		this.id = discovery.id;
 		this.name = discovery.name;
@@ -25,77 +24,63 @@ public class Discovery {
 		this.upVote = discovery.upVote;
 		this.downVote = discovery.downVote;
 	}
-
+	
 	public long getId() {
 		return id;
 	}
-
 	public void setId(long id) {
 		this.id = id;
 	}
-
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	public String getDescription() {
 		return description;
 	}
-
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
 	public String getUrl() {
 		return url;
 	}
-
 	public void setUrl(String url) {
 		this.url = url;
 	}
-
 	public Timestamp getTimestamp() {
 		return timestamp;
 	}
-
 	public void setTimestamp(Timestamp timestamp) {
 		this.timestamp = timestamp;
 	}
-
 	public User getUser() {
 		return user;
 	}
-
 	public void setUser(User user) {
 		this.user = user;
 	}
-
 	public int getUpVote() {
 		return upVote;
 	}
-
 	public void setUpVote(int upVote) {
 		this.upVote = upVote;
 	}
-
 	public int getDownVote() {
 		return downVote;
 	}
-
 	public void setDownVote(int downVote) {
 		this.downVote = downVote;
 	}
 
 	@Override
 	public String toString() {
-		return "Discovery [id=" + id + ", name=" + name + ", description=" + description + ", url=" + url
-				+ ", timestamp=" + timestamp + ", user=" + user + ", upVote=" + upVote + ", downVote=" + downVote + "]";
+		return "Discovery [id=" + id + ", name=" + name + ", description=" + description + ", url="
+				+ url + ", timestamp=" + timestamp + ", user=" + user + ", upVote=" + upVote
+				+ ", downVote=" + downVote + "]";
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

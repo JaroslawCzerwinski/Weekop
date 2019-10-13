@@ -1,5 +1,4 @@
 package pl.javastart.weekop.dao;
-
 import java.io.Serializable;
 import java.util.List;
 
