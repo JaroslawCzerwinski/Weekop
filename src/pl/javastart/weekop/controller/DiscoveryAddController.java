@@ -1,6 +1,7 @@
 package pl.javastart.weekop.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,16 +14,20 @@ import pl.javastart.weekop.service.DiscoveryService;
 @WebServlet("/add")
 public class DiscoveryAddController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		if(request.getUserPrincipal() != null) {
-			request.getRequestDispatcher("new.jsp").forward(request, response);
+			request.getRequestDispatcher("WEB-INF/new.jsp").forward(request, response);
 		} else {
 			response.sendError(403);
 		}
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		String name = request.getParameter("inputName");
 		String description = request.getParameter("inputDescription");
@@ -36,5 +41,4 @@ public class DiscoveryAddController extends HttpServlet {
 			response.sendError(403);
 		}
 	}
-
 }

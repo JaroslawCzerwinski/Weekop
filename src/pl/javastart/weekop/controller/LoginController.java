@@ -1,6 +1,7 @@
 package pl.javastart.weekop.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,5 +20,4 @@ public class LoginController extends HttpServlet {
 			response.sendError(403);
 		}
 	}
-
 }
